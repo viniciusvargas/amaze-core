@@ -31,8 +31,7 @@ public class Beacon implements Serializable {
 
 	private String uuid;
 	
-	@ManyToOne(cascade=CascadeType.MERGE)
-	@JoinColumn(name="id_beacon_details")
+	@OneToOne(cascade=CascadeType.ALL, mappedBy="beacon")
 	private BeaconDetails beaconDetails;
 	
 	public Beacon (){}
@@ -71,6 +70,7 @@ public class Beacon implements Serializable {
 	public String getMinor() {
 		return minor;
 	}
+	
 	public void setMinor(String minor) {
 		this.minor = minor;
 	}
