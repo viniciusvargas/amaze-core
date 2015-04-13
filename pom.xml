@@ -4,6 +4,13 @@
   <artifactId>amaze-core</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <distributionManagement>
+  <snapshotRepository>
+    <id>snapshots</id>
+    <url>http://nexus-vinacrf.rhcloud.com/nexus/content/repositories/snapshots</url>
+  </snapshotRepository>
+</distributionManagement>
+
   <dependencies>
 		<dependency>
 			<groupId>mysql</groupId>
